@@ -1,7 +1,6 @@
 [workspace]
 members = [
     "contracts/payment-processor",
-    "contracts/escrow-service", 
     "contracts/loyalty-program",
     "contracts/treasury",
     "contracts/merchant-registry",
@@ -10,12 +9,8 @@ members = [
 resolver = "2"
 
 [workspace.dependencies]
-soroban-sdk = { version = "21.0.0" }
+soroban-sdk = { version = "21.0.0", features = ["testutils"] }
 soroban-token-sdk = { version = "21.0.0" }
-
-[workspace.dependencies.soroban-sdk]
-version = "21.0.0"
-features = ["testutils"]
 
 [profile.release]
 opt-level = "z"

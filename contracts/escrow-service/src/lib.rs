@@ -1,12 +1,11 @@
-// Escrow service update 2
-// Escrow service update 8
-// Escrow service update 14
-// Escrow service update 20
-// Escrow service update 26
-// Escrow service update 32
-// Escrow service update 38
-// Escrow service update 44
-// Escrow service update 50
-// Escrow service update 56
-// Escrow service update 62
-// Escrow service update 68
+// Escrow Service Contract
+// Main contract entry point that re-exports all modules
+
+mod escrow;
+mod dispute;
+mod timelock;
+pub mod shared;
+
+pub use escrow::EscrowService;
+pub use dispute::DisputeResolution;
+pub use timelock::TimeLockRelease;

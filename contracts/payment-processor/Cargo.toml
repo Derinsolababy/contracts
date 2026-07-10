@@ -1,22 +1,20 @@
 [package]
 name = "payment-processor"
-version = "1.0.0"
+version = "0.1.0"
 edition = "2021"
-authors = ["StellarPOS Team <team@stellarpos.app>"]
-description = "Core payment processing contract for StellarPOS"
-license = "MIT"
-
-[lib]
-crate-type = ["cdylib"]
 
 [dependencies]
 soroban-sdk = { workspace = true }
-soroban-token-sdk = { workspace = true }
-shared = { path = "../shared" }
 
-[dev-dependencies]
-soroban-sdk = { workspace = true, features = ["testutils"] }
+[lib]
+crate-type = ["cdylib", "rlib"]
 
-[[bin]]
-name = "payment-processor"
-path = "src/bin/main.rs"
+[profile.release]
+opt-level = "z"
+overflow-checks = true
+debug = 0
+strip = "symbols"
+debug-assertions = false
+panic = "abort"
+codegen-units = 1
+lto = true
