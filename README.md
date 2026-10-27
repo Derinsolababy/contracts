@@ -137,4 +137,4 @@ public issues.
 
 [MIT](LICENSE)
 
-## Dead Code Removal\n\nThe optimized WASM binary must not include dead code from unused feature flags or unreachable branches. Run twiggy or wasm-opt --strip-dwarf to profile the binary and remove dead symbols before deployment.
+## Dead Code Removal\n\nThe optimized WASM binary must not include dead code from unused feature flags. Run twiggy or wasm-opt to profile and remove dead symbols before deployment.
