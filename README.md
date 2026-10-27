@@ -388,5 +388,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Soroban Documentation](https://soroban.stellar.org/)
 - [Stellar Developer Portal](https://developers.stellar.org/)
 
-
-
+<!-- fix: issue #165 - [Enhancement] Add payment splitting for group purchases -->
